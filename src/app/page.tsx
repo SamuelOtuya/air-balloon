@@ -1,10 +1,11 @@
+import TourSectionsWithPackage from "./components/services/TourSectionsWithPackage";
 
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-[family-name:var(--font-geist-sans)]">
     {/* Hero Section with Video/Image Background */}
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-[78vh]">
       {/* Video Background - you can replace this with a video element if needed */}
       <div className="absolute inset-0 z-0">
       <video
@@ -24,7 +25,7 @@ export default function Home() {
       {/* Text Content */}
       <div className="relative z-10 flex flex-col justify-center h-full max-w-4xl px-8 mx-auto text-white">
         <h1 className="mb-8 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-          Two dollars software solution for tour operators and destination management companies
+        Two Dollars Safaris: The Ultimate Solution for Tour Operators and Destination Management
         </h1>
         
         {/* Down Arrow */}
@@ -48,9 +49,15 @@ export default function Home() {
         </button>
       </div>
     </section>
+    
 
     {/* Your original content can go here */}
-    <main className="container px-8 py-16 mx-auto">
+    <main className="container py-4 mx-auto">
+    <div className="flex justify-center items-center h-full w-full">
+  <p className="text-white text-4xl text-center font-bold">Our Services</p>
+</div>
+
+    <TourSectionsWithPackage/>
       {/* Original content */}
     </main>
   </div>

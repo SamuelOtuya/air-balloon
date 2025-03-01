@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white w-full py-4">
+    <header className="bg-black text-white w-full py-4 fixed top-0 left-0 z-50  shadow-md">
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
@@ -42,21 +42,28 @@ const Header: React.FC<HeaderProps> = ({
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <div className="relative group">
-            <Link href="/about" className="hover:text-red-600 transition-colors duration-300">
-              About <span className="ml-1">▼</span>
-            </Link>
-            <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden group-hover:block z-10">
-              <Link href="/about/company" className="block px-4 py-2 hover:bg-gray-100">Our Company</Link>
-              <Link href="/about/team" className="block px-4 py-2 hover:bg-gray-100">Our Team</Link>
-            </div>
+          
+            <div className='relative-group'> 
+              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+            Home
+          </Link>
           </div>
 
-          <Link href="/products" className="hover:text-red-600 transition-colors duration-300">
-            Products
-          </Link>
-
           <div className="relative group">
+            <Link href="/about" className="hover:text-red-600 transition-colors duration-300">
+              About Us
+            </Link>
+            {/* <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden group-hover:block z-10">
+              <Link href="/about/company" className="block px-4 py-2 hover:bg-gray-100">Our Company</Link>
+              <Link href="/about/team" className="block px-4 py-2 hover:bg-gray-100">Our Team</Link>
+            </div> */}
+          </div>
+
+          {/* <Link href="/products" className="hover:text-red-600 transition-colors duration-300">
+            Products
+          </Link> */}
+
+          {/* <div className="relative group">
             <Link href="/solutions" className="hover:text-red-600 transition-colors duration-300">
               Solutions <span className="ml-1">▼</span>
             </Link>
@@ -64,13 +71,9 @@ const Header: React.FC<HeaderProps> = ({
               <Link href="/solutions/enterprise" className="block px-4 py-2 hover:bg-gray-100">Enterprise</Link>
               <Link href="/solutions/smb" className="block px-4 py-2 hover:bg-gray-100">Small Business</Link>
             </div>
-          </div>
+          </div> */}
 
-          <Link href="/services" className="hover:text-red-600 transition-colors duration-300">
-            Services
-          </Link>
-
-          <div className="relative group">
+          {/* <div className="relative group">
             <Link href="/resources" className="hover:text-red-600 transition-colors duration-300">
               Resources <span className="ml-1">▼</span>
             </Link>
@@ -78,16 +81,30 @@ const Header: React.FC<HeaderProps> = ({
               <Link href="/resources/blog" className="block px-4 py-2 hover:bg-gray-100">Blog</Link>
               <Link href="/resources/guides" className="block px-4 py-2 hover:bg-gray-100">Guides</Link>
             </div>
-          </div>
+          </div> */}
 
           <div className="relative group">
             <Link href="/contact" className="hover:text-red-600 transition-colors duration-300">
-              Contact <span className="ml-1">▼</span>
+              Contact Us <span className="ml-1">▼</span>
             </Link>
-            <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden group-hover:block z-10">
-              <Link href="/contact/sales" className="block px-4 py-2 hover:bg-gray-100">Sales</Link>
-              <Link href="/contact/support" className="block px-4 py-2 hover:bg-gray-100">Support</Link>
-            </div>
+          </div>
+
+          <div className='relative-group'> 
+              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+            Accomodation
+          </Link>
+          </div>
+
+          <div className='relative-group'> 
+              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+            Balloon Flight
+          </Link>
+          </div>
+
+          <div className='relative-group'> 
+              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+            Vehicle transport
+          </Link>
           </div>
         </nav>
 
@@ -112,10 +129,11 @@ const Header: React.FC<HeaderProps> = ({
               </svg>
             </Link>
           </div>
-          
+          <Link href="/services">
           <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">
-            BOOK A DEMO
+            BOOK NOW
           </button>
+          </Link>
 
           <Dropdown label={currentLanguage} color="dark" size="sm">
             <Dropdown.Item onClick={() => onLanguageChange('English')}>
@@ -159,10 +177,10 @@ const Header: React.FC<HeaderProps> = ({
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900 px-4 py-2">
           <Link href="/about" className="block py-2 hover:text-red-600">About</Link>
-          <Link href="/products" className="block py-2 hover:text-red-600">Products</Link>
-          <Link href="/solutions" className="block py-2 hover:text-red-600">Solutions</Link>
+          {/* <Link href="/products" className="block py-2 hover:text-red-600">Products</Link> */}
+          {/* <Link href="/solutions" className="block py-2 hover:text-red-600">Solutions</Link> */}
           <Link href="/services" className="block py-2 hover:text-red-600">Services</Link>
-          <Link href="/resources" className="block py-2 hover:text-red-600">Resources</Link>
+          {/* <Link href="/resources" className="block py-2 hover:text-red-600">Resources</Link> */}
           <Link href="/contact" className="block py-2 hover:text-red-600">Contact</Link>
           
           <div className="mt-4 flex flex-col space-y-4">
