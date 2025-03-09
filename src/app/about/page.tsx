@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import BT from '../assets/about.jpg'
 import VH from '../assets/vehicle.jpeg'
+import Link from 'next/link';
 
 const AboutPage = () => {
   return (
@@ -28,7 +29,7 @@ const AboutPage = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
             <p className="text-gray-600 mb-4">
-              Founded in 2010, our safari company began with a simple mission: to share the incredible beauty of East Africa with travelers from around the world in a sustainable and authentic way.
+              Founded in 2022, our safari company began with a simple mission: to share the incredible beauty of East Africa with travelers from around the world in a sustainable and authentic way.
             </p>
             <p className="text-gray-600 mb-4">
               What started as a small operation with just two vehicles and a handful of dedicated guides has grown into one of the region's most respected tour operators, known for exceptional service and unforgettable experiences.
@@ -55,19 +56,19 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "John Kimani",
-                role: "Founder & Head Guide",
-                bio: "With over 20 years of experience in the safari industry, John's knowledge of East African wildlife is unmatched."
+                name: "B. Nyambura and Mudi",
+                role: "Founder",
+                bio: "With over 20 years of experience in the safari industry, Nyambura's and Mudi's knowledge of East African wildlife is unmatched."
               },
               {
-                name: "Sarah Omondi",
-                role: "Operations Manager",
-                bio: "Sarah ensures that every safari runs smoothly, from initial booking to your return home."
+                name: "Sheilah Amondi",
+                role: "Head of Safari guide",
+                bio: "Sheilah ensures that every safari runs smoothly, from initial booking to your return home."
               },
               {
-                name: "Daniel Mwangi",
-                role: "Head Safari Guide",
-                bio: "A certified naturalist with a passion for conservation, Daniel makes every game drive an educational adventure."
+                name: "Maggy Gathii",
+                role: "Head of operations/marketing",
+                bio: "A certified naturalist with a passion for conservation, Maggy makes every game drive an educational adventure."
               }
             ].map((member, index) => (
               <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -79,7 +80,7 @@ const AboutPage = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                  <h3 className="text-xl font-bold mb-1 text-gray-500">{member.name}</h3>
                   <p className="text-red-600 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600">{member.bio}</p>
                 </div>
@@ -123,7 +124,7 @@ const AboutPage = () => {
               <div className="h-12 w-12 bg-red-600 rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-xl font-bold">{index + 1}</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
+              <h3 className="text-xl font-bold mb-3 text-gray-500">{reason.title}</h3>
               <p className="text-gray-600">{reason.description}</p>
             </div>
           ))}
@@ -176,7 +177,7 @@ const AboutPage = () => {
             <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-duration-300">
               <div className="text-yellow-400 text-3xl mb-4">★★★★★</div>
               <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
-              <p className="font-bold">{testimonial.author}</p>
+              <p className="font-bold text-gray-400">{testimonial.author} </p>
               <p className="text-sm text-gray-500">{testimonial.trip}</p>
             </div>
           ))}
@@ -186,14 +187,18 @@ const AboutPage = () => {
       {/* Contact CTA Section */}
       <div className="bg-gray-100 py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Plan Your Safari Adventure?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-500">Ready to Plan Your Safari Adventure?</h2>
           <p className="text-gray-600 mb-8">Contact our team of safari experts to start planning your dream East African adventure today.</p>
+          <Link href="/bookings">
           <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-md transition duration-300 mr-4">
             CONTACT US
           </button>
+          </Link>
+        <Link href="/services">
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition duration-300">
             VIEW PACKAGES
           </button>
+          </Link>
         </div>
       </div>
     </div>

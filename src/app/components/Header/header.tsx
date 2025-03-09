@@ -84,25 +84,25 @@ const Header: React.FC<HeaderProps> = ({
           </div> */}
 
           <div className="relative group">
-            <Link href="/contact" className="hover:text-red-600 transition-colors duration-300">
+            <Link href="/booking" className="hover:text-red-600 transition-colors duration-300">
               Contact Us <span className="ml-1">▼</span>
             </Link>
           </div>
 
           <div className='relative-group'> 
-              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+              <Link href="/services" className="hover:text-red-600 transition-colors duration-300">
             Accomodation
           </Link>
           </div>
 
           <div className='relative-group'> 
-              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+              <Link href="/services" className="hover:text-red-600 transition-colors duration-300">
             Balloon Flight
           </Link>
           </div>
 
           <div className='relative-group'> 
-              <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+              <Link href="/services" className="hover:text-red-600 transition-colors duration-300">
             Vehicle transport
           </Link>
           </div>
@@ -176,7 +176,8 @@ const Header: React.FC<HeaderProps> = ({
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900 px-4 py-2">
-          <Link href="/about" className="block py-2 hover:text-red-600">About</Link>
+          <Link href="/" className="block py-2 hover:text-red-600">Home</Link>
+          <Link href="/about" className="block py-2 hover:text-red-600">About Us</Link>
           {/* <Link href="/products" className="block py-2 hover:text-red-600">Products</Link> */}
           {/* <Link href="/solutions" className="block py-2 hover:text-red-600">Solutions</Link> */}
           <Link href="/services" className="block py-2 hover:text-red-600">Services</Link>
@@ -203,10 +204,11 @@ const Header: React.FC<HeaderProps> = ({
                 </svg>
               </Link>
             </div>
-            
+            <Link href='/services'>
             <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg w-full">
-              BOOK A DEMO
+              BOOK NOW
             </button>
+            </Link>
             
             <select 
               className="bg-gray-800 text-white rounded p-2"

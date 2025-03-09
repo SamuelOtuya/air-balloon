@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TourSectionsWithPackage from "./components/services/TourSectionsWithPackage";
 
 
@@ -41,12 +42,14 @@ export default function Home() {
         <p className="text-xl">
           450 tour operators and DMCs in 70 countries trust Tourplan to run their businesses
         </p>
+        <Link href="/about">
         <button className="flex items-center mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 transition-colors text-white">
           FIND OUT WHY 
           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </button>
+        </Link>
       </div>
     </section>
     
