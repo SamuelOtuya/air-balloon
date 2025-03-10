@@ -1,17 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image"; // Import StaticImageData
+import  { StaticImageData } from "next/image"; // Import StaticImageData
 import ClientExperience from "./ClientExperience";
 
 // Import images
 import br from "../../../app/assets/breakfast.jpg";
-import fat from "../../assets/fat.jpg";
 import v5 from "../../assets/v1.jpg";
 import v6 from "../../assets/v2.jpg";
 import b5 from "../../assets/b5.jpg"
 import b6 from "../../assets/b3.jpg"
 import br5 from "../../assets/br2.jpg"
-import br6 from "../../assets/breakfast.jpg"
 import c1 from "../../assets/ac2.jpg"
 import c2 from "../../assets/acc1.webp"
 

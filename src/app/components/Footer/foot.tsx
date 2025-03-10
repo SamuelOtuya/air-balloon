@@ -21,11 +21,11 @@ export function Foot() {
             </div>
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-[#fe2a39] text-lg"/>
-              <span className="text-sm">+254 7***** ***** (Landline)</span>
+              <span className="text-sm">+254 7240 353 32 (Landline)</span>
             </div>
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-[#fe2a39] text-lg"/>
-              <span className="text-sm">+254 7***** ***** (WhatsApp)</span>
+              <span className="text-sm">+254 7240 353 32 (WhatsApp)</span>
             </div>
           </div>
           <div className="space-y-4 text-white">
@@ -50,7 +50,7 @@ export function Foot() {
             <h1 className="text-[#fe2a39] text-xl font-semibold">Contact Us</h1>
             <p className="text-sm">Follow us on social media:</p>
             <div className="flex space-x-4">
-              <Footer.Icon href="https://www.facebook.com/hilllaneautoshop/" icon={BsFacebook} className="text-white hover:text-[#fe2a39] transition-colors" />
+              <Footer.Icon href="https://www.facebook.com" icon={BsFacebook} className="text-white hover:text-[#fe2a39] transition-colors" />
               <Footer.Icon href="#" icon={BsInstagram} className="text-white hover:text-[#fe2a39] transition-colors" />
               <Footer.Icon href="#" icon={BsTwitter} className="text-white hover:text-[#fe2a39] transition-colors" />
               <Footer.Icon href="#" icon={BsGithub} className="text-white hover:text-[#fe2a39] transition-colors" />

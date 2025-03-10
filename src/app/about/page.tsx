@@ -32,10 +32,10 @@ const AboutPage = () => {
               Founded in 2022, our safari company began with a simple mission: to share the incredible beauty of East Africa with travelers from around the world in a sustainable and authentic way.
             </p>
             <p className="text-gray-600 mb-4">
-              What started as a small operation with just two vehicles and a handful of dedicated guides has grown into one of the region's most respected tour operators, known for exceptional service and unforgettable experiences.
+              What started as a small operation with just two vehicles and a handful of dedicated guides has grown into one of the region&apos;s most respected tour operators, known for exceptional service and unforgettable experiences.
             </p>
             <p className="text-gray-600">
-              Through the years, we've maintained our commitment to conservation, community involvement, and creating genuine connections between our guests and the remarkable landscapes and wildlife of East Africa.
+              Through the years, we&apos;ve maintained our commitment to conservation, community involvement, and creating genuine connections between our guests and the remarkable landscapes and wildlife of East Africa.
             </p>
           </div>
           <div className="relative">
@@ -73,9 +73,11 @@ const AboutPage = () => {
             ].map((member, index) => (
               <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="relative h-64">
-                  <img 
+                  <Image 
                     src={`/api/placeholder/400/${300 + index}`} 
                     alt={member.name} 
+                    width={400}
+                    height={300 + index}
                     className="w-full h-full object-cover" 
                   />
                 </div>
@@ -138,7 +140,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-white">Our Commitment to Conservation</h2>
               <p className="text-white/90 mb-4">
-                We believe that responsible tourism plays a vital role in preserving East Africa's natural heritage for future generations. That's why we dedicate a portion of every booking to local conservation initiatives.
+                We believe that responsible tourism plays a vital role in preserving East Africa&apos;s natural heritage for future generations. That&apos;s why we dedicate a portion of every booking to local conservation initiatives.
               </p>
               <p className="text-white/90 mb-6">
                 Through partnerships with wildlife conservancies and community-based organizations, we support anti-poaching efforts, habitat preservation, and educational programs throughout the region.
@@ -148,9 +150,11 @@ const AboutPage = () => {
               </button>
             </div>
             <div>
-              <img 
+              <Image 
                 src="/api/placeholder/600/400" 
                 alt="Conservation efforts" 
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-lg shadow-xl" 
               />
             </div>
@@ -169,14 +173,14 @@ const AboutPage = () => {
               trip: "Maasai Mara Safari, August 2024"
             },
             {
-              quote: "Our guide's knowledge was incredible! He could spot animals that were completely invisible to us and taught us so much about the ecosystem. An unforgettable experience.",
+              quote: "Our guide&apos;s knowledge was incredible! He could spot animals that were completely invisible to us and taught us so much about the ecosystem. An unforgettable experience.",
               author: "Michael T., Canada",
               trip: "Tanzania & Kenya Safari, March 2024"
             }
           ].map((testimonial, index) => (
             <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-duration-300">
               <div className="text-yellow-400 text-3xl mb-4">★★★★★</div>
-              <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
+              <p className="text-gray-600 italic mb-4">&quot;{testimonial.quote}&quot;</p>
               <p className="font-bold text-gray-400">{testimonial.author} </p>
               <p className="text-sm text-gray-500">{testimonial.trip}</p>
             </div>

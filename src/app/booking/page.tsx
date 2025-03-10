@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaWhatsapp, FaInstagram, FaUmbrellaBeach, FaUtensils, FaBed, FaCalendarAlt, FaCar, FaTimes } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaWhatsapp, FaInstagram, FaUmbrellaBeach, FaUtensils,  FaCalendarAlt, FaCar, FaTimes } from "react-icons/fa";
 import { HiOutlineTicket } from "react-icons/hi";
 import { MdHotel, MdFlight } from "react-icons/md";
 
@@ -39,13 +38,14 @@ const BookingPage = () => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [successType, setSuccessType] = useState("");
 
-  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleInputChange = (e: { target: { name: string; value: string | number | boolean } }) => { 
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value
     });
-  };
+};
+
 
   // Direct link function - more reliable than the API approach
   const createWhatsAppLink = (message: string | number | boolean) => {
