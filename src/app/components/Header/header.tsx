@@ -103,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({
 
           <div className='relative-group'> 
               <Link href="/services" className="hover:text-red-600 transition-colors duration-300">
-            Vehicle transport
+            Vehicle
           </Link>
           </div>
         </nav>
@@ -182,7 +182,12 @@ const Header: React.FC<HeaderProps> = ({
           {/* <Link href="/solutions" className="block py-2 hover:text-red-600">Solutions</Link> */}
           <Link href="/services" className="block py-2 hover:text-red-600">Services</Link>
           {/* <Link href="/resources" className="block py-2 hover:text-red-600">Resources</Link> */}
-          <Link href="/contact" className="block py-2 hover:text-red-600">Contact</Link>
+          <Link href="/booking" className="block py-2 hover:text-red-600">Contact</Link>
+          <Link href="/services" className="block py-2 hover:text-red-600">Vehicle Transport</Link>
+          <Link href="/services" className="block py-2 hover:text-red-600">Bush breakfast</Link>
+          <Link href="/services" className="block py-2 hover:text-red-600">Accomodation</Link>
+          <Link href="/services" className="block py-2 hover:text-red-600">Balloon flight</Link>
+
           
           <div className="mt-4 flex flex-col space-y-4">
             <div className="flex space-x-4">

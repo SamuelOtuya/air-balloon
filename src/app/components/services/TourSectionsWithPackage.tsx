@@ -1,7 +1,7 @@
 "use client"; // Required for useRouter in App Router
 
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import br from '../../assets/breakfast.jpg';
 import br2 from '../../assets/br2.jpg';
@@ -11,49 +11,63 @@ import v from '../../assets/v1.jpg'
 import b from '../../assets/b5.jpg'
 import Link from 'next/link';
 
+interface TourFeature {
+  title: string;
+  image: StaticImageData;
+  description: string;
+  featureItems: string[];
+  slug: string;
+  id: string; // Add an 'id' property
+}
+
 const TourSectionsWithPackage = () => {
   const router = useRouter(); // Use Next.js App Router navigation
 
-  const tourFeatures = [
+  const tourFeatures: TourFeature[] = [
     {
       title: "Balloon-flight Adventure",
       image: b,
       description: "Experience breathtaking sunrise views over Maasai Mara and Amboseli, spotting wildlife and Mt. Kilimanjaro from above.",
       featureItems: ["Panoramic views of wildlife and landscapes", "Professional pilots with years of experience", "Unforgettable sunrise experience"],
-      slug: "balloon-flight"
+      slug: "balloon-flight",
+      id: "balloon-flight" // Add an 'id' property
     },
     {
       title: "Bush Breakfast",
       image: br,
       description: "Enjoy a delicious breakfast in the heart of the savannah after your balloon adventure.",
       featureItems: ["Gourmet meal in the wilderness", "Scenic location with wildlife views", "Full continental and local cuisine options"],
-      slug: "bush-breakfast"
+      slug: "bush-breakfast",
+       id: "bush-breakfast"// Add an 'id' property
     },
     {
       title: "Luxury Accommodation",
       image: ac,
       description: "Relax in comfort with our premium 2-day, 1-night accommodation package in the Maasai Mara.",
       featureItems: ["Comfortable lodging with premium amenities", "Authentic African-style luxury tents", "Stunning views of the reserve"],
-      slug: "luxury-accommodation"
+      slug: "luxury-accommodation",
+       id: "luxury-accommodation"// Add an 'id' property
     },
     {
       title: "All-Inclusive Meals",
       image: br2,
       description: "Savor delicious full board meals throughout your stay in the Maasai Mara.",
       featureItems: ["Breakfast, lunch & dinner included", "Local and international cuisine options", "Dietary accommodations available"],
-      slug: "all-inclusive-meals"
+      slug: "all-inclusive-meals",
+       id: "all-inclusive-meals"// Add an 'id' property
     },
     {
       title: "Safari Vehicle Transport",
       image: v,
       description: "Travel in comfort with our specialized safari vehicles designed for the terrain.",
       featureItems: ["Experienced drivers and guides", "Custom  vehicles with pop-up roof", "Round-trip service from Nairobi"],
-      slug: "safari-vehicle-transport"
+      slug: "safari-vehicle-transport",
+       id: "safari-vehicle-transport"// Add an 'id' property
     }
   ];
 
-  const handleNavigation = (slug: string) => {
-    router.push(`/experiences/${slug}`);
+  const handleNavigation = (id: string) => {
+    router.push(`/experiences?slug=${id}`);
   };
 
   return (
@@ -63,7 +77,7 @@ const TourSectionsWithPackage = () => {
           {tourFeatures.slice(0, 3).map((feature, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-56 overflow-hidden">
-                <Image src={feature.image} alt={feature.title} className="w-full h-48 object-fill" />
+                <Image src={feature.image} alt={feature.title} className="w-full h-48 object-fill" fill style={{objectFit: "cover"}} sizes="100vw"/>
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-3 text-gray-800">{feature.title}</h2>
@@ -77,7 +91,7 @@ const TourSectionsWithPackage = () => {
                   ))}
                 </ul>
                 <button
-                  onClick={() => handleNavigation(feature.slug)}
+                  onClick={() => handleNavigation(feature.id)}
                   className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded transition duration-300"
                 >
                   LEARN MORE
@@ -101,6 +115,9 @@ const TourSectionsWithPackage = () => {
             src={feature.image} 
             alt={feature.title} 
             className="w-full h-full object-cover"
+            fill
+            style={{objectFit: "cover"}}
+            sizes="100vw"
           />
         </div>
 
@@ -119,7 +136,7 @@ const TourSectionsWithPackage = () => {
           </ul>
 
           <button
-            onClick={() => handleNavigation(feature.slug)}
+            onClick={() => handleNavigation(feature.id)}
             className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded transition duration-300"
           >
             LEARN MORE
@@ -128,16 +145,13 @@ const TourSectionsWithPackage = () => {
       </div>
     ))}
   </div>
-</div>
-
-
-      <div className="max-w-md mx-auto px-4">
+</div>... <div className="max-w-md mx-auto px-4">
         <div className="bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="relative h-48">
-            <Image className="w-full h-full object-cover" src={fat} alt="Maasai Mara landscape with hot air balloon" />
+            <Image className="w-full h-full object-cover" src={fat} alt="Maasai Mara landscape with hot air balloon" fill style={{objectFit: "cover"}} sizes="100vw"/>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h1 className="text-2xl font-bold">DESTINATION MAASAI MARA</h1>
+              <h1 className="text-2xl font-bold">DESTINATION MAASAI MARA AND AMBOSELI</h1>
               <p className="text-lg font-semibold">PACKAGE (FULL BOARD)</p>
             </div>
           </div>
