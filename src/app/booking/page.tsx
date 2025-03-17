@@ -148,11 +148,11 @@ const BookingPage = () => {
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           modules={[Navigation, Pagination, Autoplay]} 
-          className="w-full h-[500px] rounded-lg overflow-hidden"
+          className="w-full h-[400px] rounded-lg overflow-hidden"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-[500px]">
+              <div className="relative w-full h-[400px]">
                 <Image src={image} alt={`Maasai Mara ${index + 1}`} fill className="object-cover rounded-lg" />
               </div>
             </SwiperSlide>
@@ -160,61 +160,82 @@ const BookingPage = () => {
         </Swiper>
         
         {/* Thumbnail Images */}
-        <div className="mt-4 flex space-x-2 overflow-x-auto">
+        <div className="mt-2 flex space-x-2 overflow-x-auto">
           {images.map((image, index) => (
             <div key={index} className="w-20 h-16 border border-gray-300 rounded-lg overflow-hidden">
-              <Image src={image} alt={`Thumbnail ${index + 1}`} width={80} height={60} className="object-cover" />
+              <Image src={image} alt={`Thumbnail ${index + 1}`} width={80} height={40} className="object-cover" />
             </div>
           ))}
         </div>
         
         {/* Package details section */}
-        <div className="mt-8 bg-gray-50 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">DESTINATION MAASAI MARA</h2>
-          <div className="bg-yellow-100 px-4 py-2 rounded-md inline-block mb-4">
-            <p className="text-xl font-bold text-gray-900">USD 800/- FULL BOARD</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MdFlight className="text-xl text-green-600 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">Hot Air Balloon flight experience</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <FaUtensils className="text-xl text-green-600 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">Bush breakfast in the wilderness</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MdHotel className="text-xl text-green-600 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">2 days, 1 night accommodation</p>
-              </div>
-            </div>
-            
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <FaUmbrellaBeach className="text-xl text-green-600 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">Meals on all inclusive basis</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <FaCar className="text-xl text-green-600 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">Transport in a safari vehicle to and from</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <HiOutlineTicket className="text-xl text-green-600 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">Game drive after balloon flight on your way to breakfast</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-            <p className="text-gray-700"><span className="font-semibold">Note:</span> The tour operator will arrange transport and plan your itinerary, plans, arrangement and accommodation</p>
-          </div>
-        </div>
+<div className="mt-8 bg-gray-50 p-6 rounded-lg">
+  <h2 className="text-3xl font-bold text-gray-900 mb-4">🌍 DESTINATION: MAASAI MARA</h2>
+
+  <div className="bg-yellow-100 px-4 py-2 rounded-md inline-block mb-4">
+    <p className="text-2xl font-bold text-gray-900">USD 800/- FULL BOARD</p>
+    <p className="text-gray-700 text-sm">*Experience the ultimate luxury safari adventure*</p>
+  </div>
+
+  <p className="text-lg text-gray-800 mb-6">
+    Embark on a breathtaking **2-day, 1-night safari** in the **world-famous Maasai Mara**, where luxury meets wilderness. 
+    From an unforgettable **hot air balloon flight** to thrilling **game drives**, this all-inclusive package offers an unparalleled safari experience.
+  </p>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Left Column */}
+    <div className="space-y-4">
+      <div className="flex items-start space-x-3">
+        <MdFlight className="text-2xl text-green-600 mt-1 flex-shrink-0" />
+        <p className="text-gray-700"><strong>Hot Air Balloon Safari:</strong> Witness the sunrise over the savannah as you glide above the vast plains, spotting wildlife from an aerial view.</p>
+      </div>
+      <div className="flex items-start space-x-3">
+        <FaUtensils className="text-2xl text-green-600 mt-1 flex-shrink-0" />
+        <p className="text-gray-700"><strong>Bush Breakfast in the Wilderness:</strong> After landing, enjoy a **chef-prepared breakfast** in the wild, surrounded by natures beauty.</p>
+      </div>
+      <div className="flex items-start space-x-3">
+        <MdHotel className="text-2xl text-green-600 mt-1 flex-shrink-0" />
+        <p className="text-gray-700"><strong>Luxury Accommodation:</strong> Stay in a **high-end lodge or tented camp**, offering comfort, privacy, and stunning views.</p>
+      </div>
+    </div>
+
+    {/* Right Column */}
+    <div className="space-y-4">
+      <div className="flex items-start space-x-3">
+        <FaUmbrellaBeach className="text-2xl text-green-600 mt-1 flex-shrink-0" />
+        <p className="text-gray-700"><strong>All-Inclusive Meals:</strong> Savor delicious **breakfast, lunch, and dinner**, expertly prepared to complement your adventure.</p>
+      </div>
+      <div className="flex items-start space-x-3">
+        <FaCar className="text-2xl text-green-600 mt-1 flex-shrink-0" />
+        <p className="text-gray-700"><strong>Safari Vehicle Transport:</strong> Enjoy a comfortable, scenic ride to and from Maasai Mara in a **4x4 safari vehicle** designed for wildlife viewing.</p>
+      </div>
+      <div className="flex items-start space-x-3">
+        <HiOutlineTicket className="text-2xl text-green-600 mt-1 flex-shrink-0" />
+        <p className="text-gray-700"><strong>Game Drive After Balloon Flight:</strong> Continue the adventure with a **guided safari drive**, spotting lions, elephants, and other incredible wildlife.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Important Note */}
+  <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+    <p className="text-gray-700 text-lg"><span className="font-semibold">📌 Note:</span> The tour operator will **arrange transport, itinerary planning, and accommodation** to ensure a seamless experience.</p>
+  </div>
+
+  {/* Call to Action */}
+  <div className="mt-6 text-center">
+    <button 
+    onClick={() => setShowOfferForm(true)} 
+    className="bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition">
+      🌿 Book Your Safari Adventure Today!
+    </button>
+  </div>
+</div>
+
       </div>
       
       {/* Right: Booking Details */}
-      <div className="p-6 bg-gray-100 rounded-lg sticky top-20 self-start">
+      <div className="p-6 bg-gray-100 rounded-lg sticky top-20 max-h-[80vh] overflow-auto self-start">
+
         <h1 className="text-3xl font-bold text-gray-900">Book Now</h1>
         <p className="text-gray-700 mt-2">Secure your Maasai Mara adventure</p>
         
@@ -254,7 +275,7 @@ const BookingPage = () => {
             onClick={() => setShowOfferForm(true)} 
             className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg flex items-center justify-center transition duration-300"
           >
-            📌 Make an Offer
+            📌 Make an offer
           </button>
           <button 
             onClick={() => setShowCallbackForm(true)} 
@@ -266,7 +287,7 @@ const BookingPage = () => {
             onClick={handleDirectWhatsApp} 
             className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg flex items-center justify-center transition duration-300"
           >
-            <FaWhatsapp className="mr-2 text-xl" /> WhatsApp Message
+            <FaWhatsapp className="mr-2 text-xl" /> Book on WhatsApp
           </button>
         </div>
         
