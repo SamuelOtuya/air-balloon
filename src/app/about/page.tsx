@@ -66,7 +66,7 @@ const AboutPage = () => {
                 bio: "Sheilah ensures that every safari runs smoothly, from initial booking to your return home."
               },
               {
-                name: "Maggy Gathii",
+                name: "Maggie Gathii",
                 role: "Head of operations/marketing",
                 bio: "A certified naturalist with a passion for conservation, Maggy makes every game drive an educational adventure."
               }

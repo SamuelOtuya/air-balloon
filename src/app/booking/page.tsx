@@ -207,7 +207,7 @@ const BookingPage = () => {
       </div>
       <div className="flex items-start space-x-3">
         <FaCar className="text-2xl text-green-600 mt-1 flex-shrink-0" />
-        <p className="text-gray-700"><strong>Safari Vehicle Transport:</strong> Enjoy a comfortable, scenic ride to and from Maasai Mara in a **4x4 safari vehicle** designed for wildlife viewing.</p>
+        <p className="text-gray-700"><strong>Safari Vehicle Transport:</strong> Enjoy a comfortable, scenic ride to and from Maasai Mara in a **safari vehicle** designed for wildlife viewing.</p>
       </div>
       <div className="flex items-start space-x-3">
         <HiOutlineTicket className="text-2xl text-green-600 mt-1 flex-shrink-0" />
@@ -224,7 +224,7 @@ const BookingPage = () => {
   {/* Call to Action */}
   <div className="mt-6 text-center">
     <button 
-    onClick={() => setShowOfferForm(true)} 
+    onClick={handleDirectWhatsApp} 
     className="bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition">
       🌿 Book Your Safari Adventure Today!
     </button>
@@ -253,7 +253,7 @@ const BookingPage = () => {
                 name="checkInDate"
                 value={formData.checkInDate}
                 onChange={handleInputChange}
-                className="w-full border border-gray-300 rounded-md p-2 mt-1" 
+                className="w-full border border-gray-800 rounded-md p-2 mt-1 text-gray-600" 
               />
             </div>
             <div>
@@ -263,7 +263,7 @@ const BookingPage = () => {
                 name="checkOutDate"
                 value={formData.checkOutDate}
                 onChange={handleInputChange}
-                className="w-full border border-gray-300 rounded-md p-2 mt-1" 
+                className="w-full border border-gray-300 rounded-md p-2 mt-1 text-gray-600" 
               />
             </div>
           </div>
@@ -367,39 +367,39 @@ const BookingPage = () => {
             <form onSubmit={handleCallbackSubmit}>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Name</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="Your name"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="your.email@example.com"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="+254 7XX XXX XXX"
                     required
                   />
@@ -407,24 +407,24 @@ const BookingPage = () => {
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">Check-in Date</label>
                     <input
                       type="date"
                       name="checkInDate"
                       value={formData.checkInDate}
                       onChange={handleInputChange}
-                      className="w-full p-2 border border-gray-300 rounded-md"
+                      className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">Check-out Date</label>
                     <input
                       type="date"
                       name="checkOutDate"
                       value={formData.checkOutDate}
                       onChange={handleInputChange}
-                      className="w-full p-2 border border-gray-300 rounded-md"
+                      className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     />
                   </div>
                 </div>
@@ -455,39 +455,39 @@ const BookingPage = () => {
             <form onSubmit={handleOfferSubmit}>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Name</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="Your name"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="your.email@example.com"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="+254 7XX XXX XXX"
                     required
                   />
@@ -495,36 +495,36 @@ const BookingPage = () => {
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">Check-in Date</label>
                     <input
                       type="date"
                       name="checkInDate"
                       value={formData.checkInDate}
                       onChange={handleInputChange}
-                      className="w-full p-2 border border-gray-300 rounded-md"
+                      className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">Check-out Date</label>
                     <input
                       type="date"
                       name="checkOutDate"
                       value={formData.checkOutDate}
                       onChange={handleInputChange}
-                      className="w-full p-2 border border-gray-300 rounded-md"
+                      className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Your Offer Message</label>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Your Offer Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     // rows="3"
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-300 rounded-md text-gray-700"
                     placeholder="Tell us about your offer..."
                     required
                   ></textarea>

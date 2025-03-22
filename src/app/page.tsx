@@ -26,7 +26,7 @@ export default function Home() {
       {/* Text Content */}
       <div className="relative z-10 flex flex-col justify-center h-full max-w-4xl px-8 mx-auto text-white">
         <h1 className="mb-8 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-        Two Dollars Safaris: The Ultimate Solution for Tour Operators and Destination Management
+        Welcome to Two Dollars Safaris
         </h1>
         
         {/* Down Arrow */}
@@ -40,7 +40,7 @@ export default function Home() {
       {/* Stats Box */}
       <div className="absolute bottom-0 right-0 z-10 p-6 bg-black/40 backdrop-blur-sm text-white max-w-md">
         <p className="text-xl">
-          450 tour operators and DMCs in 70 countries trust Tourplan to run their businesses
+          450 tour operators and DMCs in 70 countries trust TwoDollars Tourplan to run their businesses
         </p>
         <Link href="/about">
         <button className="flex items-center mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 transition-colors text-white">
