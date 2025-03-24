@@ -21,6 +21,7 @@ import r4 from "../assets/r4.jpg";
 import r5 from "../assets/r5.jpg";
 import c1 from "../assets/ac2.jpg";
 import c2 from "../assets/acc1.webp";
+import WhyUs from '../components/WhyUs';
 
 interface Experience {
   title: string;
@@ -161,7 +162,12 @@ function ExperienceDetails({ slug }: { slug: string }) {
           </button>
         </Link>
       </div>
+      <div className="flex justify-center items-center h-full w-full bg-black py-2">
+          <p className="text-white text-4xl text-center font-bold">Why Choose Us</p>
+        </div>
+      <WhyUs/>
     </div>
+    
   );
 }
 

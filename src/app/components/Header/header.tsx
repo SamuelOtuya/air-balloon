@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function closeMenu() {
-    throw new Error('Function not implemented.');
+    setIsMenuOpen(false);
   }
 
   return (

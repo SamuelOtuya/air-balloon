@@ -10,6 +10,8 @@ import ac from '../../assets/ac3.jpg';
 import v from '../../assets/v1.jpg'
 import b from '../../assets/b5.jpg'
 import Link from 'next/link';
+import WhyUs from '../WhyUs';
+import OurTeam from '../OurTeam';
 
 interface TourFeature {
   title: string;
@@ -192,7 +194,17 @@ const TourSectionsWithPackage = () => {
           </div>
         </div>
       </div>
+      <div className="flex justify-center items-center h-full w-full bg-black py-2">
+          <p className="text-white text-4xl text-center font-bold">Why Choose Us</p>
+        </div>
+      <WhyUs/>
+      <div className="flex justify-center items-center h-full w-full bg-black py-2">
+          <p className="text-white text-4xl text-center font-bold">Meet Our Team</p>
+          
+        </div>
+        <OurTeam/>
     </div>
+    
   );
 };
 
