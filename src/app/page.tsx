@@ -28,12 +28,12 @@ export default function Home() {
         {/* Text Content */}
         <div className="relative z-10 flex flex-col justify-center h-full max-w-4xl px-8 mx-auto text-white">
           <h1 className="mb-8 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            Welcome to Two Dollars Safaris
+            Welcome to Two Dollars Tours and Travel
           </h1>
           
           {/* Down Arrow */}
           <div
-            className="mt-8 animate-bounce cursor-pointer"
+            className="flex justify-center items-center mt-8 animate-bounce cursor-pointer"
             onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

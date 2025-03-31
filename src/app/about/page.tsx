@@ -3,6 +3,9 @@ import Image from 'next/image';
 import BT from '../assets/about.jpg'
 import VH from '../assets/vehicle.jpeg'
 import Link from 'next/link';
+import NyamburaMudiImage from '../assets/v1.jpg';
+import SheilahAmondiImage  from '../assets/sheilah.jpg';
+import maggy from '../assets/mg.jpg';
 
 const AboutPage = () => {
   return (
@@ -48,49 +51,88 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Our Team Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Meet Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "B. Nyambura and Mudi",
-                role: "Founder",
-                bio: "With over 20 years of experience in the safari industry, Nyambura's and Mudi's knowledge of East African wildlife is unmatched."
-              },
-              {
-                name: "Sheilah Amondi",
-                role: "Head of Safari guide",
-                bio: "Sheilah ensures that every safari runs smoothly, from initial booking to your return home."
-              },
-              {
-                name: "Maggie Gathii",
-                role: "Head of operations/marketing",
-                bio: "A certified naturalist with a passion for conservation, Maggy makes every game drive an educational adventure."
-              }
-            ].map((member, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="relative h-64">
-                  <Image 
-                    src={`/api/placeholder/400/${300 + index}`} 
-                    alt={member.name} 
-                    width={400}
-                    height={300 + index}
-                    className="w-full h-full object-cover" 
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1 text-gray-500">{member.name}</h3>
-                  <p className="text-red-600 font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
-                </div>
-              </div>
-            ))}
+       {/* Directors Section */}
+       <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-tl-[80px] -z-10 transform translate-x-8 -translate-y-8"></div>
+            <Image
+              src={NyamburaMudiImage} 
+              alt="Safari guides" 
+              className="w-full h-auto rounded-tr-[80px] shadow-xl" 
+            />
           </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-6 text-gray-800">Directors Message</h2>
+            <p className="text-gray-600 mb-4">
+            Welcome to Two Dollars Tours and Travel!
+            </p>
+            <p className="text-gray-600 mb-4">
+            I’m Beth Nyambura, the proud Director of Two Dollars Tours and Travel. With a Master’s in Tours and Travel Science, I’m excited to bring you incredible travel experiences that make your dreams come true, all while offering unbeatable value.
+            </p>
+            <p className="text-gray-600 mb-4">
+            Our specialty is creating unforgettable memories through unique experiences, especially our exhilarating Hot Air Balloon Safaris in the Maasai Mara. Imagine floating above the stunning plains of the Maasai Mara, witnessing the breathtaking wildlife below, and soaking in the beauty of one of the world’s most iconic landscapes. It’s a once-in-a-lifetime experience, and we’re here to make it happen for you.
+            </p>
+            <p className="text-gray-600 mb-4">
+            We take pride in offering exceptional services, ensuring that your journey is seamless, unforgettable, and tailored just for you. From the moment you book with us, we handle all the details so you can focus on making memories that will last forever.
+            </p>
+            <p className="text-gray-600 mb-4">
+            Your adventure awaits, and we can’t wait to be a part of it!Don’t miss out on this life-changing experience! Book your Hot Air Balloon Safari in Maasai Mara today, and let us take you on an adventure like no other!
+            </p>
+            {/* <p className="text-gray-600">
+              Through the years, we&apos;ve maintained our commitment to conservation, community involvement, and creating genuine connections between our guests and the remarkable landscapes and wildlife of East Africa.
+            </p> */}
+          </div>
+         
         </div>
       </div>
+
+
+
+    <div className="bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Meet Our Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              name: "B. Nyambura and Mudi",
+              role: "Founder",
+              bio: "With over 20 years of experience in the safari industry, Nyambura's and Mudi's knowledge of East African wildlife is unmatched.",
+              photo: NyamburaMudiImage
+            },
+            {
+              name: "Sheilah Amondi",
+              role: "Head of Safari Guide",
+              bio: "Sheilah ensures that every safari runs smoothly, from initial booking to your return home.",
+              photo: SheilahAmondiImage
+            },
+            {
+              name: "Maggie Gathii",
+              role: "Head of Operations/Marketing",
+              bio: "A certified naturalist with a passion for conservation, Maggy makes every game drive an educational adventure.",
+              photo: maggy
+            }
+          ].map((member, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-64">
+                <Image 
+                  src={member.photo} 
+                  alt={member.name} 
+                  fill
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-1 text-gray-500">{member.name}</h3>
+                <p className="text-red-600 font-medium mb-3">{member.role}</p>
+                <p className="text-gray-600">{member.bio}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
 
       {/* Why Choose Us Section */}
       <div className="max-w-6xl mx-auto px-4 py-16">

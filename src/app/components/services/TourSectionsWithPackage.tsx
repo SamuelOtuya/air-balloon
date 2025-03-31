@@ -12,6 +12,7 @@ import b from '../../assets/b5.jpg'
 import Link from 'next/link';
 import WhyUs from '../WhyUs';
 import OurTeam from '../OurTeam';
+import RequestCallBack from '../RequestCallBack';
 
 interface TourFeature {
   title: string;
@@ -197,13 +198,18 @@ const TourSectionsWithPackage = () => {
       <div className="flex justify-center items-center h-full w-full bg-black py-2">
           <p className="text-white text-4xl text-center font-bold">Why Choose Us</p>
         </div>
-      <WhyUs/>
+        <div><WhyUs/></div>
+      
       <div className="flex justify-center items-center h-full w-full bg-black py-2">
           <p className="text-white text-4xl text-center font-bold">Meet Our Team</p>
           
         </div>
         <OurTeam/>
+        <div className="max-w-6xl mx-auto px-4"> 
+        <RequestCallBack/>
+        </div>
     </div>
+    
     
   );
 };

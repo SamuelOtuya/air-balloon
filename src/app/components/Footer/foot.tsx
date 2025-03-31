@@ -17,7 +17,7 @@ export function Foot() {
             </div>
             <div className="flex items-center gap-3">
               <IoMail className="text-[#fe2a39] text-lg"/>
-              <span className="text-sm">********@*****.co.ke</span>
+              <span className="text-sm">info@twodollarstoursandtravel.co.ke</span>
             </div>
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-[#fe2a39] text-lg"/>

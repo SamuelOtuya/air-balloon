@@ -22,6 +22,7 @@ import r5 from "../assets/r5.jpg";
 import c1 from "../assets/ac2.jpg";
 import c2 from "../assets/acc1.webp";
 import WhyUs from '../components/WhyUs';
+import RequestCallBack from '../components/RequestCallBack';
 
 interface Experience {
   title: string;
@@ -166,6 +167,7 @@ function ExperienceDetails({ slug }: { slug: string }) {
           <p className="text-white text-4xl text-center font-bold">Why Choose Us</p>
         </div>
       <WhyUs/>
+      <RequestCallBack/>
     </div>
     
   );
